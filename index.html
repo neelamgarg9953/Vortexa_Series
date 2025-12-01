@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VORTEXA</title>
+<style>
+  body { margin:0; font-family:Arial; background:#f3f3f3; }
+
+  /* Navbar */
+  .navbar {
+    background:#000;
+    color:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  .navbar nav a {
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+  }
+
+  /* Hero */
+  .hero {
+    background:#111 url('https://via.placeholder.com/1500x500') center/cover;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+  }
+
+  .page {
+    display:none;
+    padding:40px 20px;
+  }
+
+  .active {
+    display:block;
+  }
+
+  /* Product cards */
+  .products {
+    display:flex;
+    gap:20px;
+    padding:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .card {
+    background:white;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+  }
+
+  footer {
+    background:#000;
+    color:white;
+    padding:20px 0;
+    text-align:center;
+    margin-top:40px;
+  }
+</style>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(pageId).classList.add("active");
+    window.scrollTo(0,0);
+  }
+</script>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">VORTEXA</div>
+  <nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('mobile')">Mobile</a>
+    <a onclick="showPage('tv')">TV & AV</a>
+    <a onclick="showPage('appliances')">Appliances</a>
+    <a onclick="showPage('support')">Support</a>
+  </nav>
+</header>
+
+
+<!-- HOME PAGE -->
+<section class="page active" id="home">
+  <div class="hero">
+    <h1>VORTEXA Series</h1>
+    <p>Experience the next level of smartphone performance.</p>
+    <image src="Assets/mobile0.webp"
+    alt="Mobile"
+    height="300px"></image>
+    <br>
+    <button><b>Buy Now</b></button>
+    
+  </div>
+
+  <section class="products">
+    <div class="card">
+      <h2>VORTEXA Phone</h2>
+      <p>Powerful camera and performance.</p>
+    </div>
+    <div class="card">
+      <h2>Smart TV</h2>
+      <p>4K display with vivid colors.</p>
+    </div>
+    <div class="card">
+      <h2>Washing Machine</h2>
+      <p>Efficient and gentle on clothes.</p>
+    </div>
+  </section>
+</section>
+
+
+<!-- MOBILE PAGE -->
+<section class="page" id="mobile">
+  <h1>VORTEXA Mobile Series</h1>
+  <p>Explore our latest smartphones.</p>
+
+  <section class="products">
+    <div class="card">
+      <h2>Vortexa X1</h2>
+      <p>Ultimate performance and camera.</p>
+    </div>
+    <div class="card">
+      <h2>Vortexa Lite</h2>
+      <p>Compact, smooth & budget-friendly.</p>
+    </div>
+  </section>
+</section>
+
+
+<!-- TV PAGE -->
+<section class="page" id="tv">
+  <h1>TV & AV</h1>
+  <p>Experience entertainment like never before.</p>
+
+  <section class="products">
+    <div class="card">
+      <h2>4K Smart TV</h2>
+      <p>Crystal clear picture & sound.</p>
+    </div>
+    <div class="card">
+      <h2>Soundbar</h2>
+      <p>Cinematic sound experience.</p>
+    </div>
+  </section>
+</section>
+
+
+<!-- APPLIANCES PAGE -->
+<section class="page" id="appliances">
+  <h1>Home Appliances</h1>
+  <p>Smarter solutions for your home.</p>
+
+  <section class="products">
+    <div class="card">
+      <h2>Washing Machine</h2>
+      <p>Efficient & powerful cleaning.</p>
+    </div>
+    <div class="card">
+      <h2>Refrigerator</h2>
+      <p>Energy efficient cooling.</p>
+    </div>
+  </section>
+</section>
+
+
+<!-- SUPPORT PAGE -->
+<section class="page" id="support">
+  <h1>Customer Support</h1>
+  <p>How can we help you today?</p>
+
+  <section class="products">
+    <div class="card">
+      <h2>Warranty Info</h2>
+      <p>Check warranty & service.</p>
+    </div>
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>Email & phone support available.</p>
+    </div>
+  </section>
+</section>
+
+
+<footer>
+  © 2025 VORTEXA Clone. For practice only.
+</footer>
+
+</body>
+</html>
